@@ -32,7 +32,7 @@ class MyCharacteristicCallbacks : public BLECharacteristicCallbacks
     {
       currentColor[i] = rcvString[i];
     }
-    customCharacteristic->setValue((char *)&currentColor);
+    customCharacteristic->setValue((uint8_t*) &currentColor, 3);
     leds->set(currentColor[0], currentColor[1], currentColor[2]);
     customCharacteristic->notify(true);
   }
