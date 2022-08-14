@@ -56,6 +56,7 @@ void setup()
 {
   Serial.begin(115200);
   Serial.println("Started");
+  leds->test();
 
   // Create the BLE Device
   BLEDevice::init("STF-Eis");
